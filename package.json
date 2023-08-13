@@ -1,35 +1,18 @@
 {
-  "name": "node-template",
+  "name": "Letterboxd",
     "version": "1.0.0",
     "main": "server.js",
     "license": "MIT",
     "author": {
       "name": "Javier Arce",
       "email": "javierarce@gmail.com",
-      "url": "https://twitter.com/javier"
+      "url": "https://javier.computer"
     },
     "scripts": {
-      "start": "node server.js",
-      "dev": "concurrently \"nodemon --exec yarn start\" \"npm run scss\" \"gulp\"",
-      "scss": "node-sass --verbose --recursive --watch scss -o public/css",
-      "gulp": "gulp"
-    },
-    "bugs": {
-      "url": "https://github.com/javierarce/node-template/issues"
-    },
-    "devDependencies": {
-      "express": "^4.17.1",
-      "gulp": "^4.0.2",
-      "gulp-concat": "^2.6.1",
-      "gulp-uglify": "^3.0.2"
+      "start": "node letterboxd.js",
     },
     "dependencies": {
-      "body-parser": "^1.19.0",
-      "concurrently": "^7.6.0",
-      "dotenv": "^16.0.0",
-      "ejs": "^3.1.6",
-      "express-ejs-layouts": "^2.5.1",
-      "fs": "^0.0.1-security",
-      "node-sass": "^7.0.1"
+    "node-fetch": "^2.0.0",
+    "node-html-parser": "^5.2.0"
     }
 }
