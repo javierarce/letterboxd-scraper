@@ -1,11 +1,11 @@
 ### Letterboxd Film Scrapper
 
-```
+```shell
 yarn letterboxd {username}
 ```
 
 ### Result
-``json`
+```json
 {
   "updated_at": "2023-08-13",
   "count": 470,
