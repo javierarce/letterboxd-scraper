@@ -22,7 +22,7 @@ yarn letterboxd {username}
       "rating": 3,
       "rewatched": false
     },
-    …
+    ...
     {
       "watched_at": "2023-08-06",
       "title": "Cape Fear (1991)",
