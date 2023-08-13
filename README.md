@@ -1,32 +1,37 @@
-### Letterboxd Film Scrapper
+### Letterboxd Film Scraper
+
+A script that scrapes films from a Letterboxd user's public diary.
 
 ```shell
 yarn letterboxd {username}
 ```
 
 ### Result
-```json
+
+The films will be saved in the `films.json` file with the following structure:
+
+```js
 {
   "updated_at": "2023-08-13",
   "count": 470,
   "films": [
     {
-      "watched_at": "2023-08-11",
-      "title": "The Architect (2023)",
-      "rating": 3,
+      "watched_at": "2022-10-24",
+      "title": "Aftersun (2022)",
+      "rating": 4.5,
       "rewatched": false
     },
     {
-      "watched_at": "2023-08-07",
-      "title": "The Getaway (1972)",
-      "rating": 3,
-      "rewatched": false
+      "watched_at": "2021-03-20",
+      "title": "Le Trou (1960)",
+      "rating": 5,
+      "rewatched": true
     },
     ...
     {
-      "watched_at": "2023-08-06",
-      "title": "Cape Fear (1991)",
-      "rating": 4,
+      "watched_at": "2020-09-13",
+      "title": "Tampopo (1985)",
+      "rating": 5,
       "rewatched": false
     }
   ]
