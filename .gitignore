@@ -1,4 +1,5 @@
 # Logs
+films.json
 logs
 *.log
 npm-debug.log*

@@ -9,7 +9,7 @@
       "url": "https://javier.computer"
     },
     "scripts": {
-      "start": "node letterboxd.js",
+      "start": "node letterboxd.js"
     },
     "dependencies": {
     "node-fetch": "^2.0.0",
