@@ -38,7 +38,7 @@ async function scrapeFilms() {
     filmEntries.forEach(entry => {
       const metadataElem = entry.querySelector('.edit-review-button')
 
-      const watchedAt = metadataElem.getAttribute('data-viewing-date')
+      const watchedOn = metadataElem.getAttribute('data-viewing-date')
       const filmTitle = metadataElem.getAttribute('data-film-name')
       const rewatched = metadataElem.getAttribute('data-rewatch') === 'true'
       const year = metadataElem.getAttribute('data-film-year')
@@ -46,7 +46,7 @@ async function scrapeFilms() {
       const rating = parseInt(metadataElem.getAttribute('data-rating'), 10) / 2
 
       console.log(`${title} - ${rating} stars`)
-      films.push({ watched_at: watchedAt, title, rating, rewatched })
+      films.push({ watched_on: watchedOn, title, rating, rewatched })
     })
   }
 
