@@ -1,5 +1,5 @@
 {
-  "name": "Letterboxd",
+  "name": "letterboxd-scraper",
     "version": "1.0.0",
     "main": "server.js",
     "license": "MIT",
