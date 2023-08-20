@@ -20,7 +20,7 @@ The films will be saved in the `films.json` file with the following structure:
       "title": "Aftersun (2022)",
       "rating": 4.5,
       "rewatched": false,
-      "permalink": "afatersun"
+      "permalink": "aftersun"
     },
     {
       "watched_on": "2021-03-20",
