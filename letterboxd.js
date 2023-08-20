@@ -36,17 +36,20 @@ async function scrapeFilms() {
     const filmEntries = pageRoot.querySelectorAll('.diary-entry-row')
 
     filmEntries.forEach(entry => {
-      const metadataElem = entry.querySelector('.edit-review-button')
+      const $metadata = entry.querySelector('.edit-review-button')
+      const $actions = entry.querySelector('.film-actions')
 
-      const watchedOn = metadataElem.getAttribute('data-viewing-date')
-      const filmTitle = metadataElem.getAttribute('data-film-name')
-      const rewatched = metadataElem.getAttribute('data-rewatch') === 'true'
-      const year = metadataElem.getAttribute('data-film-year')
+      const permalink = $actions.getAttribute('data-film-slug')
+      const watchedOn = $metadata.getAttribute('data-viewing-date')
+      const filmTitle = $metadata.getAttribute('data-film-name')
+      const rewatched = $metadata.getAttribute('data-rewatch') === 'true'
+
+      const year = $metadata.getAttribute('data-film-year')
       const title = `${filmTitle} (${year})`
-      const rating = parseInt(metadataElem.getAttribute('data-rating'), 10) / 2
+      const rating = parseInt($metadata.getAttribute('data-rating'), 10) / 2
 
       console.log(`${title} - ${rating} stars`)
-      films.push({ watched_on: watchedOn, title, rating, rewatched })
+      films.push({ watched_on: watchedOn, title, rating, rewatched, permalink })
     })
   }
 
